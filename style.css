@@ -178,23 +178,21 @@ section { position: relative; z-index: 1; }
   margin-top: .9rem;
   opacity: 0; animation: fade-up .9s .65s forwards;
 }
-.hero-cta {
-  display: inline-block; margin-top: 1.8rem;
-  padding: .85rem 2.2rem;
-  border: 1.5px solid var(--gold); border-radius: 2px;
-  color: var(--gold2);
-  font-family: "Cinzel", serif; font-size: .82rem; letter-spacing: .18em; text-transform: uppercase;
-  text-decoration: none; background: transparent;
-  transition: background .4s, color .4s, transform .3s;
-  opacity: 0; animation: fade-up .8s 1.05s forwards;
-}
-.hero-cta:hover { background: var(--gold); color: var(--azul3); transform: translateY(-2px); }
+.hero-cta { display: none; } /* botón eliminado */
 
 /* Indicador de scroll */
 .scroll-ind {
-  position: absolute; bottom: 1.8rem; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: .45rem;
-  opacity: 0; animation: fade-up .7s 1.3s forwards;
+  position: absolute;
+  bottom: 1.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .45rem;
+  opacity: 0;
+  animation: fade-up .7s 1.1s forwards;
+  white-space: nowrap;
 }
 .scroll-ind span { font-size: .6rem; letter-spacing: .22em; color: rgba(200,145,58,.55); text-transform: uppercase; }
 .scroll-arrow {
@@ -388,6 +386,12 @@ section { position: relative; z-index: 1; }
   border: 1px solid rgba(200,145,58,.28); border-radius: 100px;
   font-family: "Cinzel", serif; font-size: .74rem; letter-spacing: .14em;
   color: var(--gold2);
+  text-decoration: none;
+  transition: background .3s, border-color .3s;
+}
+.info-pill:hover {
+  background: rgba(200,145,58,.12);
+  border-color: rgba(200,145,58,.55);
 }
 .wa-btn {
   display: inline-flex; align-items: center; gap: .7rem;

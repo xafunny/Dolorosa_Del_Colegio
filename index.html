@@ -38,7 +38,6 @@
       <span>La Dolorosa del Colegio</span>
     </h1>
     <p class="hero-motto">&ldquo;Madre m&iacute;a, que no me pierda&rdquo;</p>
-    <a href="#cierre" class="hero-cta">&iexcl;&Uacute;nete a nuestra familia de fe!</a>
 
     <div class="scroll-ind">
       <span>Conoce m&aacute;s</span>
@@ -216,7 +215,9 @@
       </div>
 
       <div class="reveal" style="transition-delay:.1s">
-        <div class="info-pill">&#128205;&nbsp; La Esperanza</div>
+        <a class="info-pill" href="https://maps.app.goo.gl/5YMAhK7j3Yq2GTD19" target="_blank" rel="noopener">
+          &#128205;&nbsp; La Esperanza &nbsp;&mdash;&nbsp; Ver en Google Maps
+        </a>
       </div>
 
       <!-- BOTÓN WHATSAPP — edita el número en script_v1.js -->
@@ -246,6 +247,11 @@
   <!-- Scripts -->
   <script src="script_v1.js"></script>
   <script src="script_v2.js"></script>
+  <!-- Forzar inicio desde arriba siempre -->
+  <script>
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    window.addEventListener("load", function () { window.scrollTo(0, 0); });
+  </script>
 
 </body>
 </html>
