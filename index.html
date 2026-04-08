@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Congregación La Dolorosa del Colegio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Canvas de partículas animadas -->
+  <canvas id="particles"></canvas>
+
+  <!-- ══════════════════════════════
+       §1  HERO / PORTADA
+  ══════════════════════════════ -->
+  <section id="hero">
+    <div class="halo"></div>
+    <div class="halo"></div>
+    <div class="halo"></div>
+
+    <!-- FOTO 1: La Virgencita  →  cambia "foto_1.png" por tu archivo -->
+    <div class="virgen-wrap" id="virgenWrap">
+      <img
+        class="virgen-img"
+        src="foto_1.png"
+        alt="La Dolorosa del Colegio"
+        onerror="this.parentElement.classList.add('no-img')"
+      />
+    </div>
+
+    <p class="hero-eyebrow">Parroquia &middot; La Esperanza</p>
+    <h1 class="hero-title">
+      Congregaci&oacute;n<br>
+      <span>La Dolorosa del Colegio</span>
+    </h1>
+    <p class="hero-motto">&ldquo;Madre m&iacute;a, que no me pierda&rdquo;</p>
+    <a href="#cierre" class="hero-cta">&iexcl;&Uacute;nete a nuestra familia de fe!</a>
+
+    <div class="scroll-ind">
+      <span>Conoce m&aacute;s</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       §2  QUIÉNES SOMOS
+  ══════════════════════════════ -->
+  <section id="quienes">
+    <div class="sec-inner">
+
+      <div class="reveal">
+        <span class="deco-cross">&#10022;</span>
+        <p class="sec-label">Nuestra Identidad</p>
+        <div class="ornament">
+          <div class="orn-line"></div>
+          <div class="orn-diamond"></div>
+          <div class="orn-line rev"></div>
+        </div>
+        <h2 class="sec-title">&iquest;Qui&eacute;nes somos?</h2>
+        <span class="gold-line"></span>
+        <p class="sec-body">
+          Somos una comunidad de fieles unidos por la profunda devoci&oacute;n a
+          La Dolorosa del Colegio. Nos gu&iacute;a el legado de amor y fe que nuestra
+          Madre nos dej&oacute;, buscando ser testimonios vivos de su mensaje en nuestra
+          parroquia y en nuestros hogares.
+        </p>
+      </div>
+
+      <!-- FOTO 2: Foto grupal de miembros  →  cambia "foto_2.jpg" por tu archivo -->
+      <div class="photo-frame reveal" style="transition-delay:.2s">
+        <img
+          src="foto_2.jpg"
+          alt="Miembros de la Congregaci&oacute;n"
+          onerror="this.outerHTML='<div class=\'photo-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><polyline points=\'21 15 16 10 5 21\'/></svg><p>Coloca tu foto grupal aquí<br><small>Nómbrala <strong>foto_2.jpg</strong></small></p></div>'"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       §3  MISIÓN
+  ══════════════════════════════ -->
+  <section id="mision">
+    <div class="sec-inner">
+
+      <div class="reveal">
+        <p class="sec-label">Nuestra Misi&oacute;n y Devoci&oacute;n</p>
+        <div class="ornament">
+          <div class="orn-line"></div>
+          <div class="orn-diamond"></div>
+          <div class="orn-line rev"></div>
+        </div>
+        <h2 class="sec-title">&iquest;Qu&eacute; hacemos?</h2>
+        <span class="gold-line"></span>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card reveal" style="transition-delay:.1s">
+          <span class="card-icon">&#128218;</span>
+          <p class="card-title">Visita de la Virgen</p>
+          <p class="card-text">
+            Contamos con una Urna Peregrina con la imagen de nuestra Virgencita,
+            la cual visita los hogares de los miembros para rezar el Santo Rosario en familia.
+          </p>
+        </div>
+        <div class="card reveal" style="transition-delay:.2s">
+          <span class="card-icon">&#128591;</span>
+          <p class="card-title">Vida de Oraci&oacute;n</p>
+          <p class="card-text">
+            Participamos activamente en las celebraciones lit&uacute;rgicas y momentos
+            de espiritualidad comunitaria.
+          </p>
+        </div>
+        <div class="card reveal" style="transition-delay:.3s">
+          <span class="card-icon">&#127801;</span>
+          <p class="card-title">Fiesta Patronal</p>
+          <p class="card-text">
+            Organizamos con gran amor la gran fiesta de la Virgen todos los
+            <strong class="highlight">20 de abril</strong>.
+          </p>
+        </div>
+        <div class="card reveal" style="transition-delay:.4s">
+          <span class="card-icon">&#128155;</span>
+          <p class="card-title">Acci&oacute;n Solidaria</p>
+          <p class="card-text">
+            Colaboramos con ofrendas y alimentos para apoyar a quienes m&aacute;s lo necesitan.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       §4  POR QUÉ UNIRSE
+  ══════════════════════════════ -->
+  <section id="porque">
+    <div class="sec-inner">
+
+      <div class="reveal">
+        <p class="sec-label">Una invitaci&oacute;n del coraz&oacute;n</p>
+        <div class="ornament">
+          <div class="orn-line"></div>
+          <div class="orn-diamond"></div>
+          <div class="orn-line rev"></div>
+        </div>
+        <h2 class="sec-title">Camina con nosotros</h2>
+        <span class="gold-line"></span>
+      </div>
+
+      <div class="porque-layout">
+
+        <!-- FOTO 3: La urna peregrina  →  cambia "foto_3.jpg" por tu archivo -->
+        <div class="urna-frame reveal">
+          <div class="urna-glow"></div>
+          <img
+            src="foto_3.jpg"
+            alt="Urna Peregrina de la Virgen"
+            onerror="this.outerHTML='<div class=\'urna-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><polyline points=\'21 15 16 10 5 21\'/></svg><p>Foto de la Urna<br><small>Nómbrala <strong>foto_3.jpg</strong></small></p></div>'"
+          />
+        </div>
+
+        <ul class="porque-list reveal" style="transition-delay:.15s">
+          <li>
+            <div class="li-icon">&#10022;</div>
+            <p class="li-text">
+              Recibe la bendici&oacute;n de la Virgen en tu hogar a trav&eacute;s
+              de nuestra Urna Peregrina.
+            </p>
+          </li>
+          <li>
+            <div class="li-icon">&#10022;</div>
+            <p class="li-text">
+              Encuentra un lugar de paz y crecimiento espiritual constante.
+            </p>
+          </li>
+          <li>
+            <div class="li-icon">&#10022;</div>
+            <p class="li-text">
+              Forma parte de una familia que mantiene viva la tradici&oacute;n y el servicio.
+            </p>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       §5  CIERRE / CTA
+  ══════════════════════════════ -->
+  <section id="cierre">
+    <div class="cierre-inner">
+
+      <div class="reveal">
+        <p class="sec-label">&iexcl;Te esperamos!</p>
+        <div class="ornament">
+          <div class="orn-line"></div>
+          <div class="orn-diamond"></div>
+          <div class="orn-line rev"></div>
+        </div>
+        <h2 class="sec-title">&iexcl;Te esperamos con los brazos abiertos!</h2>
+        <span class="gold-line"></span>
+        <p class="big-quote">
+          &ldquo;Si sientes el llamado de nuestra Madre, este es tu lugar.&rdquo;
+        </p>
+        <p class="cierre-body">
+          Ya sea que desees regresar o integrarte por primera vez, ser&aacute;s bienvenido.
+          Nuestra comunidad te espera con el coraz&oacute;n abierto y la fe de La Dolorosa como gu&iacute;a.
+        </p>
+      </div>
+
+      <div class="reveal" style="transition-delay:.1s">
+        <div class="info-pill">&#128205;&nbsp; La Esperanza</div>
+      </div>
+
+      <!-- BOTÓN WHATSAPP — edita el número en script_v1.js -->
+      <div class="reveal" style="transition-delay:.2s">
+        <a class="wa-btn" id="waBtn" href="#" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94
+            1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198
+            0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077
+            4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421
+            7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0
+            01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0
+            012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05
+            0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882
+            11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Cont&aacute;ctanos por WhatsApp
+        </a>
+      </div>
+
+    </div>
+    <div class="footer-ribbon">
+      &#10022; &nbsp; Congregaci&oacute;n La Dolorosa del Colegio &middot; La Esperanza &nbsp; &#10022;
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="script_v1.js"></script>
+  <script src="script_v2.js"></script>
+
+</body>
+</html>
