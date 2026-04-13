@@ -37,13 +37,29 @@ body {
 /* ── Todas las secciones sobre el canvas ── */
 section { position: relative; z-index: 1; }
 
-/* ── Animación reveal al hacer scroll ── */
+/* ── Animación reveal — funciona al bajar Y al subir ── */
 .reveal {
   opacity: 0;
-  transform: translateY(36px);
-  transition: opacity .85s ease, transform .85s ease;
+  transform: translateY(40px);
+  transition: opacity .7s ease, transform .7s ease;
 }
-.reveal.visible { opacity: 1; transform: none; }
+/* Visible — centrado, sin desplazamiento */
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Sale por arriba (el usuario sube) → entra desde arriba cuando baje */
+.reveal.hidden-up {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+/* Sale por abajo (el usuario baja) → entra desde abajo cuando suba */
+.reveal.hidden-down {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .7s ease, transform .7s ease;
+}
 
 /* ── Ornamentos decorativos ── */
 .ornament {
@@ -189,10 +205,26 @@ section { position: relative; z-index: 1; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .45rem;
+  gap: .35rem;
   opacity: 0;
   animation: fade-up .7s 1.1s forwards;
   white-space: nowrap;
+}
+.scroll-text {
+  font-family: "Cinzel", serif;
+  font-size: .78rem;
+  letter-spacing: .22em;
+  color: var(--gold2);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.scroll-sub {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: .85rem;
+  letter-spacing: .1em;
+  color: rgba(200,145,58,.65);
+  margin-bottom: .4rem;
 }
 .scroll-ind span { font-size: .6rem; letter-spacing: .22em; color: rgba(200,145,58,.55); text-transform: uppercase; }
 .scroll-arrow {

@@ -66,21 +66,36 @@
   draw();
 })();
 
-/* ── Reveal en scroll ─────────────────────────────────────── */
+/* ── Reveal en scroll — funciona al bajar Y al subir ─────── */
 (function () {
+  var elements = document.querySelectorAll(".reveal");
+
   var observer = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) {
+          // Elemento entra en vista → animar entrada
           e.target.classList.add("visible");
-          observer.unobserve(e.target);
+          e.target.classList.remove("hidden-up", "hidden-down");
+        } else {
+          // Elemento sale de vista → preparar animación para la próxima vez
+          var rect = e.target.getBoundingClientRect();
+          if (rect.top > 0) {
+            // Sale por abajo → cuando vuelva a subir, entrará desde abajo
+            e.target.classList.remove("visible");
+            e.target.classList.add("hidden-down");
+          } else {
+            // Sale por arriba → cuando vuelva a bajar, entrará desde arriba
+            e.target.classList.remove("visible");
+            e.target.classList.add("hidden-up");
+          }
         }
       });
     },
     { threshold: 0.15 }
   );
 
-  document.querySelectorAll(".reveal").forEach(function (el) {
+  elements.forEach(function (el) {
     observer.observe(el);
   });
 })();
