@@ -102,13 +102,13 @@ section { position: relative; z-index: 1; }
   overflow: hidden;
 }
 #hero {
-  min-height: 100vh;
+  min-height: auto;           /* Elimina el espacio forzado de pantalla completa */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Permite que el contenido fluya hacia abajo */
+  justify-content: center;
   text-align: center;
-  padding: 5rem 1.2rem 2rem;   /* Más espacio arriba para la imagen */
+  padding: 1.5rem 1.2rem 3rem; /* Reduce el padding superior de 5rem a 1.5rem */
   position: relative;
   background:
     radial-gradient(ellipse 90% 60% at 50% 0%, rgba(35,68,112,.55) 0%, transparent 65%),
