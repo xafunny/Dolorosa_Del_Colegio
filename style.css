@@ -101,20 +101,22 @@ section { position: relative; z-index: 1; }
     linear-gradient(180deg, #0d1e34 0%, #0f2240 100%);
   overflow: hidden;
 }
+
 #hero {
-  min-height: auto;           /* Elimina el espacio forzado de pantalla completa */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Esto centra verticalmente todo el contenido */
   text-align: center;
-  padding: 1.5rem 1.2rem 3rem; /* Reduce el padding superior de 5rem a 1.5rem */
+  padding: 2rem 1.2rem;
   position: relative;
   background:
     radial-gradient(ellipse 90% 60% at 50% 0%, rgba(35,68,112,.55) 0%, transparent 65%),
     radial-gradient(ellipse 70% 55% at 10% 100%, rgba(200,145,58,.12) 0%, transparent 60%),
     linear-gradient(180deg, #0d1e34 0%, #0f2240 100%);
   overflow: hidden;
+  width: 100%;
 }
 /* Foto circular de la Virgen */
 .virgen-wrap {
@@ -196,15 +198,19 @@ section { position: relative; z-index: 1; }
 .hero-cta { display: none; } /* botón eliminado */
 
 .scroll-ind {
-  position: relative;        /* Cambiado de absolute a relative */
-  margin-top: 4rem;          /* Espacio manual debajo del lema */
+  position: absolute;
+  bottom: 2.5rem;   /* Lo fija abajo del todo */
+  left: 0;
+  right: 0;
+  margin: 0 auto;  /* Centrado horizontal perfecto */
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: fit-content;
   opacity: 0;
   animation: fade-up .7s 1.1s forwards;
   z-index: 10;
+  pointer-events: none;
 }
 
 .scroll-text {
@@ -214,7 +220,6 @@ section { position: relative; z-index: 1; }
   color: var(--gold2);
   text-transform: uppercase;
   font-weight: 600;
-  margin-bottom: 0.3rem;
 }
 
 .scroll-sub {
@@ -223,7 +228,7 @@ section { position: relative; z-index: 1; }
   font-size: .85rem;
   letter-spacing: .1em;
   color: rgba(200, 145, 58, 0.65);
-  margin-bottom: 0.8rem;
+  margin-bottom: 8px;
 }
 
 .scroll-arrow {
